@@ -1,7 +1,7 @@
 import "./App.css";
 import Items from "./components/Items/Items";
 
-function App() {
+const App = () => {
   const allItems = [
     {
       name: "hamburger",
@@ -28,9 +28,9 @@ function App() {
   return (
     <div>
       <div className="page-title">Our Items</div>
-      <Items items={allItems}></Items>
+      <Items items={allItems} />
     </div>
   );
-}
+};
 
 export default App;

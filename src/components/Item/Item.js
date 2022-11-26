@@ -1,16 +1,16 @@
 import "./Item.css";
 import Card from "./Card/Card";
 
-function Item(props) {
+const Item = ({ name, price, img }) => {
   return (
     <Card className="item-card">
       <div className="item-basic-data">
-        <div className="item-name">{props.name}</div>
-        <div className="item-price">{props.price}</div>
+        <div className="item-name">{name}</div>
+        <div className="item-price">{price}</div>
       </div>
-      <img className="item-img" src={props.img} />
+      <img className="item-img" src={img} />
     </Card>
   );
-}
+};
 
 export default Item;

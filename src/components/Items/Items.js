@@ -1,14 +1,14 @@
 import Item from "../Item/Item";
 import "./Items.css";
 
-function Items(props) {
+const Items = ({ items }) => {
   return (
     <div className="all-items">
-      {props.items.map((item) => (
-        <Item name={item.name} price={item.price} img={item.img}></Item>
+      {items.map((item) => (
+        <Item name={item.name} price={item.price} img={item.img} />
       ))}
     </div>
   );
-}
+};
 
 export default Items;
