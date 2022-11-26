@@ -1,0 +1,28 @@
+.item-img {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.item-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #5C6BC0;
+}
+
+.item-price {
+    font-size: 20px;
+    color: #455A64;
+}
+
+.item-basic-data {
+    display: grid;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
