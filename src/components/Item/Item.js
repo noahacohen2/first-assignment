@@ -1,15 +1,16 @@
 import "./Item.css";
-import Card from "./Card/Card";
 
 const Item = ({ name, price, img }) => {
+  const openExtendedInformation = () => {};
+
   return (
-    <Card className="item-card">
+    <div className="card item-card" onClick={openExtendedInformation}>
       <div className="item-basic-data">
         <div className="item-name">{name}</div>
         <div className="item-price">{price}</div>
       </div>
       <img className="item-img" src={img} />
-    </Card>
+    </div>
   );
 };
 

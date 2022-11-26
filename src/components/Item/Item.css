@@ -1,28 +1,37 @@
 .item-img {
-    width: 100px;
-    height: 100px;
-    margin: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
 }
 
 .item-name {
-    font-size: 30px;
-    font-weight: bold;
-    color: #5C6BC0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #5c6bc0;
 }
 
 .item-price {
-    font-size: 20px;
-    color: #455A64;
+  font-size: 20px;
+  color: #455a64;
 }
 
 .item-basic-data {
-    display: grid;
-    align-items: center;
-    margin-left: 15px;
+  display: grid;
+  align-items: center;
+  margin-left: 15px;
 }
 
 .item-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  margin-top: 20px;
+  width: 1300px;
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 5px;
 }
