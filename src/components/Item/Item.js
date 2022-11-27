@@ -1,16 +1,15 @@
 import "./Item.css";
+import { Link } from "react-router-dom";
 
-const Item = ({ name, price, img }) => {
-  const openExtendedInformation = () => {};
-
+const Item = ({ name, price, firstImg, index }) => {
   return (
-    <div className="card item-card" onClick={openExtendedInformation}>
+    <Link className="card item-card" to={`/productInfo/${index}`}>
       <div className="item-basic-data">
         <div className="item-name">{name}</div>
         <div className="item-price">{price}</div>
       </div>
-      <img className="item-img" src={img} />
-    </div>
+      <img className="item-img" src={firstImg} />
+    </Link>
   );
 };
 

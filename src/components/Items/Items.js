@@ -4,8 +4,14 @@ import "./Items.css";
 const Items = ({ items }) => {
   return (
     <div className="all-items">
-      {items.map((item) => (
-        <Item name={item.name} price={item.price} img={item.img} />
+      {items.map((item, index) => (
+        <Item
+          key={index}
+          name={item.name}
+          price={item.price}
+          firstImg={item.firstImg}
+          index={index}
+        />
       ))}
     </div>
   );
