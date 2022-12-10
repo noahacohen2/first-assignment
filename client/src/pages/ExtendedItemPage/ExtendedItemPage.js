@@ -1,7 +1,7 @@
 import "./ExtendedItemPage.css";
 import { allItems } from "../../data/data";
 import { useParams } from "react-router-dom";
-import { useContext } from 'react';
+import { useContext, useEffect } from "react";
 import AppContext from "../../context";
 
 const ExtendedItemPage = () => {
@@ -15,7 +15,7 @@ const ExtendedItemPage = () => {
     let allItems = cartItems;
     allItems.push(product);
     setCartItems(allItems);
-  }
+  };
 
   return (
     <>
@@ -26,7 +26,9 @@ const ExtendedItemPage = () => {
       <img className="item-img" src={product.firstImg} />
       <img className="item-img" src={product.secondImg} />
 
-      <button className="add-item-btn" onClick={addItem}>add to cart</button>
+      <button className="add-item-btn" onClick={addItem}>
+        add to cart
+      </button>
     </>
   );
 };
