@@ -5,7 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ExtendedItemPage from "./pages/ExtendedItemPage/ExtendedItemPage";
-import ShppingCartPage from "./pages/shoppingCartPage/ShoppingCartPage"
+import ShppingCartPage from "./pages/shoppingCartPage/ShoppingCartPage";
 import ConetxtProvider from "./contextProvider";
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/shoppingCart",
-    element: <ShppingCartPage />
+    element: <ShppingCartPage />,
   },
   {
     path: "/",
@@ -31,8 +31,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ConetxtProvider>
     <React.StrictMode>
-      <RouterProvider router={router}>
-      </RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </React.StrictMode>
   </ConetxtProvider>
 );
