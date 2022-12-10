@@ -11,6 +11,7 @@
   margin: 0;
   color: white;
   margin: auto;
+  text-decoration: none;
 }
 
 .title {
@@ -24,4 +25,12 @@
   height: 50px;
   float: left;
   margin-left: 10px;
+}
+
+.lili {
+  text-decoration: none;
+}
+
+.lili:oncli {
+  text-decoration: none;
 }
