@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import ExtendedItemPage from "./pages/ExtendedItemPage/ExtendedItemPage";
+import ShppingCartPage from "./pages/shoppingCartPage/ShoppingCartPage"
+import ConetxtProvider from "./contextProvider";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
     element: <ExtendedItemPage />,
   },
   {
+    path: "/shoppingCart",
+    element: <ShppingCartPage />
+  },
+  {
     path: "/",
     element: <HomePage />,
   },
@@ -23,9 +29,12 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <ConetxtProvider>
+    <React.StrictMode>
+      <RouterProvider router={router}>
+      </RouterProvider>
+    </React.StrictMode>
+  </ConetxtProvider>
 );
 
 reportWebVitals();

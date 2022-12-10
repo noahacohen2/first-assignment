@@ -20,3 +20,10 @@
   max-width: 100px;
   max-height: 100px;
 }
+
+.add-item-btn {
+  display: flex;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: #69F0AE;
+}
