@@ -3,7 +3,7 @@ import "./Items.css";
 
 const Items = ({ items }) => {
   return (
-    <div className="all-items">
+    <div className="all-items grid-container">
       {items.map((item, index) => (
         <Item
           key={index}

@@ -1,5 +1,6 @@
 .all-items {
-    margin-top: 17px;
-    display: grid;
-    justify-content: center;
+  margin-top: 17px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
 }

@@ -1,37 +1,32 @@
 .item-img {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-}
-
-.item-name {
-  font-size: 30px;
-  font-weight: bold;
-  color: #5c6bc0;
-}
-
-.item-price {
-  font-size: 20px;
-  color: #455a64;
+  border-radius: 5px 5px 0 0;
+  height: 70%;
+  width: 100%;
 }
 
 .item-basic-data {
+  color: black;
   display: grid;
-  align-items: center;
-  margin-left: 15px;
+  text-decoration: none;
 }
 
-.item-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.item-basic-data .item-name {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.item-basic-data .item-price {
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .card {
-  margin-top: 20px;
-  width: 1300px;
-  max-height: 200px;
+  margin: 25px;
   border-radius: 8px;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
   padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 300px;
+  width: 300px;
 }

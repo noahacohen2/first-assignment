@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Item = ({ name, price, firstImg, index }) => {
   return (
-    <Link className="card item-card" to={`/productInfo/${index}`}>
-      <div className="item-basic-data">
-        <div className="item-name">{name}</div>
-        <div className="item-price">{price}</div>
-      </div>
+    <Link className="card grid-item" to={`/productInfo/${index}`}>
       <img className="item-img" src={firstImg} />
+      <div className="container item-basic-data">
+        <h4 className="item-name">{name}</h4>
+        <p className="item-price">{price}</p>
+      </div>
     </Link>
   );
 };
