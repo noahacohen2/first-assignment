@@ -15,18 +15,31 @@ const ExtendedItemPage = () => {
     let allItems = cartItems;
     allItems.push(product);
     setCartItems(allItems);
+    // todo
   };
 
   return (
     <>
-      <h1 id="item-name">{product.name}</h1>
-      <div className="item-data">{product.shopName}</div>
-      <div className="item-data">{product.description}</div>
-      <div className="item-data">{product.price}</div>
-      <img className="item-img" src={product.firstImg} />
-      <img className="item-img" src={product.secondImg} />
+      <div className="item-data">
+        <b>Product Name: </b>
+        {product.name}
+      </div>
+      <div className="item-data">
+        <b>Shop Name: </b>
+        {product.shopName}
+      </div>
+      <div className="item-data">
+        <b>Product Description: </b>
+        {product.description}
+      </div>
+      <div className="item-data">
+        <b>Product Price:</b>
+        {product.price}
+      </div>
+      <img className="extended-img" src={product.firstImg} />
+      <img className="extended-img" src={product.secondImg} />
 
-      <button className="add-item-btn" onClick={addItem}>
+      <button className="add-item-btn item-data" onClick={addItem}>
         add to cart
       </button>
     </>

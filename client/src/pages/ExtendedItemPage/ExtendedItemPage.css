@@ -1,29 +1,25 @@
-#item-name {
-  font-size: 50px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-  color: black;
-}
-
 .item-data {
   font-size: 25px;
-  font-weight: normal;
   display: flex;
-  justify-content: left;
-  margin-top: 15px;
+  margin: 15px;
   color: black;
 }
 
-/* .item-img {
-  max-width: 100px;
-  max-height: 100px;
-} */
+.extended-img {
+  margin: 15px;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 300px;
+  width: 300px;
+}
 
 .add-item-btn {
-  display: flex;
+  color: #6a33eb;
+  background-color: transparent;
   border-radius: 10px;
-  border-color: transparent;
-  background-color: #69f0ae;
+  border: 2px solid #6a33eb;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
 }

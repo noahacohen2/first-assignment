@@ -1,10 +1,13 @@
 .save-cart-btn {
-  border-radius: 10px;
-  border-color: transparent;
-  background-color: #69f0ae;
   display: flex;
   margin: auto;
-  margin-top: 15px;
+  color: #6a33eb;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid #6a33eb;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .page-title {
