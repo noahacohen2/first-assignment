@@ -36,11 +36,11 @@ const ShoppingCartPage = () => {
   return (
     <>
       <div className="page-title">Your shopping cart</div>
-      <UserForm></UserForm>
-      <Items items={cartItems} />
+      <UserForm />
       <button className="save-cart-btn" onClick={saveCart}>
         Save your cart
       </button>
+      <Items items={cartItems} />
     </>
   );
 };

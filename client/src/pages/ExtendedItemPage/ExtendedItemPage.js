@@ -36,12 +36,11 @@ const ExtendedItemPage = () => {
         <b>Product Price:</b>
         {product.price}
       </div>
-      <img className="extended-img" src={product.firstImg} />
-      <img className="extended-img" src={product.secondImg} />
-
       <button className="add-item-btn item-data" onClick={addItem}>
         add to cart
       </button>
+      <img className="extended-img" src={product.firstImg} />
+      <img className="extended-img" src={product.secondImg} />
     </>
   );
 };
