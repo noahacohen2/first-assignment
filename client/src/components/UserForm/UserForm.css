@@ -1,25 +1,28 @@
-.new-user__control {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-    justify-content: center;
-    padding-top: 15px;
+.user-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  justify-content: center;
+  padding-top: 15px;
 }
 
-.new-user__control label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-    padding-top: 7px;
+.user-form label {
+  font-weight: bold;
+  width: 100px;
 }
 
-.new-user__control input {
-    font: inherit;
-    padding: 0.5rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 20rem;
-    max-width: 100%;
+.user-form input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.form-input:focus {
+  outline: none !important;
+  border: 1.5px solid #6a33eb;
+  box-shadow: 0 0 10px #719ece;
 }
