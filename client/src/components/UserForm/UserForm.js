@@ -1,22 +1,23 @@
 import "./UserForm.css";
-import { useContext } from "react";
-import AppContext from "../../context";
 
-const UserForm = (props) => {
-  const [userData, setUserDate] = useContext(AppContext).userData;
-
-  const nameChangeHandeler = (event) => {
-    let currUserData = userData;
-    currUserData.UserName = event.target.value;
-    setUserDate(currUserData);
-    // props.onUserNameChange(event.target.value);
+const UserForm = ({
+  userName,
+  setUserName,
+  userTz,
+  setUserTz,
+  userEmail,
+  setUserEmail,
+}) => {
+  const setName = (event) => {
+    setUserName(event.target.value);
   };
-  const idChangeHandeler = (event) => {
-    let currUserData = userData;
-    console.log(event.target.value);
-    currUserData.UserId = event.target.value;
-    setUserDate(currUserData);
-    // props.onUserIdChange(event.target.value);
+
+  const setTz = (event) => {
+    setUserTz(event.target.value);
+  };
+
+  const setMail = (event) => {
+    setUserEmail(event.target.value);
   };
 
   return (
@@ -26,16 +27,16 @@ const UserForm = (props) => {
         <input
           className="form-input"
           type="text"
-          value={userData.UserName}
-          onChange={nameChangeHandeler}
+          value={userName}
+          onChange={setName}
         />
       </div>
       <div className="user-form">
-        <label>User id:</label>
+        <label>User tz:</label>
         <input
           type="text"
-          value={userData.UserId}
-          onChange={idChangeHandeler}
+          value={userTz}
+          onChange={setTz}
           className="form-input"
         />
       </div>
@@ -44,8 +45,8 @@ const UserForm = (props) => {
         <input
           className="form-input"
           type="text"
-          value={userData.UserEmail}
-          onChange={nameChangeHandeler}
+          value={userEmail}
+          onChange={setMail}
         />
       </div>
     </>

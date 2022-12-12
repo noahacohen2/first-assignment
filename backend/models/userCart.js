@@ -9,7 +9,7 @@ const userCartSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  CartItems: {
+  cartItems: {
     type: Array,
     require: true,
   },
