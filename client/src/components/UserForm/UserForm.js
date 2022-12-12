@@ -33,11 +33,19 @@ const UserForm = (props) => {
       <div className="user-form">
         <label>User id:</label>
         <input
-          type="number"
-          min="0"
+          type="text"
           value={userData.UserId}
           onChange={idChangeHandeler}
           className="form-input"
+        />
+      </div>
+      <div className="user-form">
+        <label>User e-mail:</label>
+        <input
+          className="form-input"
+          type="text"
+          value={userData.UserEmail}
+          onChange={nameChangeHandeler}
         />
       </div>
     </>

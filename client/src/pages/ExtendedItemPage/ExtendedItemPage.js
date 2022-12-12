@@ -15,7 +15,17 @@ const ExtendedItemPage = () => {
     let allItems = cartItems;
     allItems.push(product);
     setCartItems(allItems);
-    // todo
+    // todo:
+    // no need let + delete from storage
+    // save user data
+    // remove comments
+    // connect to server
+    // validation fancs for user data
+    // fit id for img in "save your cart"
+    // present products from db
+    // save order for db
+    // present total amount of money
+    // clean context at saving order
   };
 
   return (
