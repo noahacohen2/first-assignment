@@ -1,22 +1,23 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
 const UserCart = require("./models/userCart.js");
+const Product = require("./models/product.js");
 const app = express();
 const cors = require("cors");
 
-const corsOptions = {
-  origin: "*",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "http://localhost:3001",
+    credentials: true,
+    optionsSuccessStatus: 200,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 mongoose
   .connect(
-    "mongodb+srv://noaanddani:daninoadb@cluster0.uammdub.mongodb.net/test",
+    "mongodb+srv://noaanddani:daninoadb@cluster0.uammdub.mongodb.net/?retryWrites=true&w=majority",
     { useNewUrlParser: true }
   )
   .then(() => {
@@ -28,6 +29,7 @@ mongoose
 
 app.post("/userCart", async (req, res) => {
   if (req.body != {}) {
+    console.log(req.body.cart);
     UserCart.create(req.body.cart)
       .then((res) => {
         console.log(res);
@@ -36,14 +38,18 @@ app.post("/userCart", async (req, res) => {
         console.log(e);
       });
   }
-
-  app.get("/products", async (req, res) => {
-    console.log("dani dont know");
-    const products = await Product.find({});
-    console.log(products);
-  });
-
   res.end();
+});
+
+app.get("/products", async (req, res) => {
+  Product.find({})
+    .then((products) => {
+      res.end(JSON.stringify(products));
+    })
+    .catch((e) => {
+      console.log(e);
+      res.end();
+    });
 });
 
 app.listen(3000, () => {

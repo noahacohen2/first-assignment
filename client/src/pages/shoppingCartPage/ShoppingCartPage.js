@@ -9,13 +9,13 @@ import api from "../../config/api";
 const ShoppingCartPage = () => {
   const { cartItems, cleanCart } = useContext(cartContext);
   const [userName, setUserName] = useState("");
-  const [userTz, setUserTz] = useState("");
+  const [tz, setTz] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [totalCartPrice, setTotalCartPrice] = useState("");
 
   const cleanUserData = () => {
     setUserName("");
-    setUserTz("");
+    setTz("");
     setUserEmail("");
   };
 
@@ -28,12 +28,14 @@ const ShoppingCartPage = () => {
   }, [cartItems]);
 
   const saveCart = () => {
+    let cart = {
+      userName,
+      tz,
+      userEmail,
+      cartItems,
+    };
     api
-      .post("userCart", {
-        userName,
-        tz: userTz,
-        cartItems,
-      })
+      .post("userCart", { cart: cart })
       .then(() => {
         cleanCart();
         cleanUserData();
@@ -49,8 +51,8 @@ const ShoppingCartPage = () => {
       <UserForm
         userName={userName}
         setUserName={setUserName}
-        userTz={userTz}
-        setUserTz={setUserTz}
+        userTz={tz}
+        setUserTz={setTz}
         userEmail={userEmail}
         setUserEmail={setUserEmail}
       />

@@ -10,6 +10,14 @@ const productSchema = new mongoose.Schema({
     require: true,
     min: 0,
   },
+  shopName: {
+    type: String,
+    require: true,
+  },
+  description: {
+    type: String,
+    require: true,
+  },
   firstImg: {
     type: String,
     require: true,
@@ -18,15 +26,7 @@ const productSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  description: {
-    type: String,
-    require: true,
-  },
-  shopName: {
-    type: String,
-    require: true,
-  },
 });
 
-const product = mongoose.model("product", productSchema);
-module.exports = product;
+const Product = mongoose.model("products", productSchema);
+module.exports = Product;

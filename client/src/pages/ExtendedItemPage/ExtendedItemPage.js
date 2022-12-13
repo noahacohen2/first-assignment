@@ -1,28 +1,23 @@
 import "./ExtendedItemPage.css";
-// import { allItems } from "../../data/data";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import cartContext from "../../context/cartContext/cartContext";
+import productsContext from "../../context/productsContext/productsContext";
 
 const ExtendedItemPage = () => {
   const { productIndex } = useParams();
   const product = allItems[productIndex];
 
   const { addCartItem } = useContext(cartContext);
-  const allItems = [];
+  const { allItems } = useContext(productsContext);
+
   // todo:
   // no need let + delete from storage
   // save user data
   // remove comments and console log and debuggers
-  // connect to server
-  // validation fancs for user data
   // fit id for img in "save your cart"
   // present products from db
   // save order for db
-  // present total amount of money
-  // clean context at saving order
-  // userData ? context
-  // does not save cart
 
   return (
     <>

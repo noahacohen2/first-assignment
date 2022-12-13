@@ -7,9 +7,9 @@ const ProductsContextProvider = ({ children }) => {
 
   useEffect(() => {
     api
-      .get("products")
-      .then(() => {
-        console.log("load products");
+      .get("/products", {})
+      .then((res) => {
+        setAllItems(res.data);
       })
       .catch((err) => {
         console.log(err);

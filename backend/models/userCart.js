@@ -9,11 +9,15 @@ const userCartSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  userEmail: {
+    type: String,
+    require: true,
+  },
   cartItems: {
     type: Array,
     require: true,
   },
 });
 
-const UserCart = mongoose.model("UserCart", userCartSchema);
+const UserCart = mongoose.model("usercarts", userCartSchema);
 module.exports = UserCart;
