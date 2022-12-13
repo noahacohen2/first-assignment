@@ -14,7 +14,6 @@ const App = () => {
           <Route path=":productIndex" element={<ExtendedItemPage />} />
         </Route>
         <Route path="shoppingCart" element={<ShppingCartPage />} />
-        {/* <Route path="/" element={<HomePage />} /> */}
       </Routes>
     </div>
   );

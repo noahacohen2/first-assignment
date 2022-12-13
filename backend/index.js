@@ -29,7 +29,6 @@ mongoose
 
 app.post("/userCart", async (req, res) => {
   if (req.body != {}) {
-    console.log(req.body.cart);
     UserCart.create(req.body.cart)
       .then((res) => {
         console.log(res);

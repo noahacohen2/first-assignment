@@ -1,6 +1,5 @@
 import "./shoppingCartPage.css";
 import Items from "../../components/Items/Items";
-// import { addCart } from "../../data/dl";
 import { useContext, useEffect, useState } from "react";
 import cartContext from "../../context/cartContext/cartContext";
 import UserForm from "../../components/UserForm/UserForm";
@@ -28,14 +27,15 @@ const ShoppingCartPage = () => {
   }, [cartItems]);
 
   const saveCart = () => {
-    let cart = {
-      userName,
-      tz,
-      userEmail,
-      cartItems,
-    };
     api
-      .post("userCart", { cart: cart })
+      .post("userCart", {
+        cart: {
+          userName,
+          tz,
+          userEmail,
+          cartItems,
+        },
+      })
       .then(() => {
         cleanCart();
         cleanUserData();

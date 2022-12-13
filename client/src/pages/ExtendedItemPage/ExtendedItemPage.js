@@ -11,10 +11,6 @@ const ExtendedItemPage = () => {
 
   const product = allItems[productIndex];
 
-  // todo:
-  // remove comments and console log and debuggers
-  // fit id for img in "save your cart"
-
   return (
     <>
       <div className="item-data">

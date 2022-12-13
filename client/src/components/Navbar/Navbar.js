@@ -10,7 +10,7 @@ const Navbar = () => {
       </Link>
       <h1 className="title grid-item">
         <Link className="grid-item" to={`/homePage`}>
-          Danoa shopping
+          Danoa Shopping Site
         </Link>
       </h1>
     </nav>
