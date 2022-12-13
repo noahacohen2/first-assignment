@@ -4,13 +4,13 @@ import "./Items.css";
 const Items = ({ items }) => {
   return (
     <div className="all-items grid-container">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <Item
-          key={index}
+          key={item.serialNumber}
           name={item.name}
           price={item.price}
           firstImg={item.firstImg}
-          index={index}
+          index={item.serialNumber}
         />
       ))}
     </div>

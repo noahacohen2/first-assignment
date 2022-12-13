@@ -9,7 +9,7 @@ const ProductsContextProvider = ({ children }) => {
     api
       .get("/products", {})
       .then((res) => {
-        setAllItems(res.data);
+        setAllItems(res.data.sort((a, b) => a.serialNumber - b.serialNumber));
       })
       .catch((err) => {
         console.log(err);

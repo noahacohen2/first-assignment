@@ -26,6 +26,10 @@ const productSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  serialNumber: {
+    type: Number,
+    require: true,
+  },
 });
 
 const Product = mongoose.model("products", productSchema);

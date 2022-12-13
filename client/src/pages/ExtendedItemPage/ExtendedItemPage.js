@@ -5,19 +5,15 @@ import cartContext from "../../context/cartContext/cartContext";
 import productsContext from "../../context/productsContext/productsContext";
 
 const ExtendedItemPage = () => {
-  const { productIndex } = useParams();
-  const product = allItems[productIndex];
-
   const { addCartItem } = useContext(cartContext);
   const { allItems } = useContext(productsContext);
+  const { productIndex } = useParams();
+
+  const product = allItems[productIndex];
 
   // todo:
-  // no need let + delete from storage
-  // save user data
   // remove comments and console log and debuggers
   // fit id for img in "save your cart"
-  // present products from db
-  // save order for db
 
   return (
     <>
